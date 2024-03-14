@@ -21,10 +21,18 @@ function getCountdownTime() {
     // Подсчет дней, часов, минут и секунд
 
     let days = Math.floor(distance / oneDay);
-    let hours = Math.floor((distance % oneDay) / oneYour);
+    let hours = Math.floor((distance % oneDay) / oneHour);
     let minutes = Math.floor((distance % oneHour) / oneMinute);
-    let seconds = Math.floor((distance % oneHour) / 1000);
+    let seconds = Math.floor((distance % oneMinute) / 1000);
 
-}
+    // создать массив с переменными 
+    const values = [days, hours, minutes, seconds];
+    console.log(values);
 
-getCountdownTime();
+    // добавить значения переменных на страницу
+    items.forEach(function (item, index) {
+        item.textContent = values[index];
+    })
+};
+
+let countdown = setInterval(getCountdownTime, 1000);
