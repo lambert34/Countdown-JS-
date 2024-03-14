@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 16px;
+}
+
+.image {
+    margin-bottom: 16px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.container p {
+    font-size: 18px;
+    margin: 16px 0;
+}
+
+.countdown {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 16px;
+    min-width: 320px;
+}
+
+.countdown-item {
+    background-color: #49a6e9;
+    padding: 6px;
+    min-width: 65px;
+}
