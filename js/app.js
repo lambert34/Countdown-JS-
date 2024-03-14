@@ -1,4 +1,5 @@
 const items = document.querySelectorAll(".countdown-item > h3");
+const countdownElement = document.querySelector(".countdown");
 
 //назначить точку отсчета
 let countdownDate = new Date(2024, 3, 14, 15, 30, 0).getTime(); // метод getTime() возвращает время в миллисекундах
@@ -32,7 +33,15 @@ function getCountdownTime() {
     // добавить значения переменных на страницу
     items.forEach(function (item, index) {
         item.textContent = values[index];
-    })
+    });
+
+    if ( distance < 0 ) {
+        clearInterval(countdown);
+        countdownElement.innerHTML = "<h3 class='expired'>Время вышло</h3>";
+    }
 };
 
-let countdown = setInterval(getCountdownTime, 1000);
+let countdown = setInterval(getCountdownTime, 1000); //вызов кода по интервалу setInterval 
+
+// добавить инициализацию текущего времени 
+getCountdownTime();

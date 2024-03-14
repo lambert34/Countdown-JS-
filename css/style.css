@@ -39,4 +39,12 @@ h1 {
     background-color: #49a6e9;
     padding: 6px;
     min-width: 65px;
+    border-radius: 2px;
+}
+
+.expired {
+    color: #222;
+    background-color: #49a6e9;
+    font-size: 24px;
+    margin: 0 auto;
 }
